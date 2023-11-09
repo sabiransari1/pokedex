@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Flex, Heading, Image, Text } from '@chakra-ui/react';
+import { Box, Button, Flex, Heading, Image, useToast } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import { Navbar } from '../components/Navbar';
 
@@ -7,6 +7,7 @@ export const SinglePokemon = () => {
   const params = useParams();
   const [singleData, setSingleData] = useState({});
   const [pokemonFavorites, setPokemonFavorites] = useState([]);
+  const toast = useToast();
 
   const fetchData = async (url) => {
     try {
@@ -42,6 +43,13 @@ export const SinglePokemon = () => {
       'pokemon-favorites',
       JSON.stringify(newPokemonFavoritesx)
     );
+    toast({
+      title: 'Favorite item added successfully',
+      status: 'success',
+      isClosable: true,
+      position: 'top',
+      duration: '1000',
+    });
   };
 
   return (
