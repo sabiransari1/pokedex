@@ -8,8 +8,6 @@ export const SinglePokemon = () => {
   const [singleData, setSingleData] = useState({});
   const [pokemonFavorites, setPokemonFavorites] = useState([]);
 
-  console.log(singleData);
-
   const fetchData = async (url) => {
     try {
       let res = await fetch(`${url}/${params.pokemon_name}`, {
@@ -62,7 +60,6 @@ export const SinglePokemon = () => {
           <Image src="" />
           <Heading>ID: {singleData.id}</Heading>
           <Heading>Base Experience: {singleData.base_experience}</Heading>
-          {/* <Heading>Type: {singleData.types[0].type.name}</Heading> */}
           <Heading>Type: {}</Heading>
           <Heading>Hp: {}</Heading>
           <Heading>Attack: {}</Heading>
@@ -73,7 +70,7 @@ export const SinglePokemon = () => {
           <Heading>Abilities: {}</Heading>
           <Heading>Moves: {}</Heading>
           <Heading>Weight: {singleData.weight}</Heading>
-          <Heading>Height: {}</Heading>
+          <Heading>Height: {singleData.height}</Heading>
 
           <Button w={'100%'} onClick={handleFavorite}>
             Add To Favorite

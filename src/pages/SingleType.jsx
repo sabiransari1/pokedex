@@ -7,6 +7,8 @@ export const SingleType = () => {
   const params = useParams();
   const [singleData, setSingleData] = useState({});
 
+  // console.log(singleData);
+
   const fetchData = async (url) => {
     try {
       let res = await fetch(`${url}/${params.types_id}`, {
@@ -42,7 +44,7 @@ export const SingleType = () => {
         >
           <Heading>Name: {singleData.name}</Heading>
           <Image src="" />
-          <Heading>ID: {}</Heading>
+          <Heading>ID: {singleData.id}</Heading>
           <Heading>Base Experience: {}</Heading>
           <Heading>Type: {}</Heading>
           <Heading>Hp: {}</Heading>
