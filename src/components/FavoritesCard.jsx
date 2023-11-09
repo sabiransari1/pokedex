@@ -35,17 +35,18 @@ export const FavoritesCard = ({ item }) => {
         <Image src="" />
         <Heading>ID: {item.id}</Heading>
         <Heading>Base Experience: {item.base_experience}</Heading>
-        <Heading>Type: {item.id}</Heading>
-        <Heading>Hp: {item.id}</Heading>
-        <Heading>Attack: {item.id}</Heading>
-        <Heading>Defense: {item.id}</Heading>
-        <Heading>Special-Attack: {item.id}</Heading>
-        <Heading>Special-Defense: {item.id}</Heading>
-        <Heading>Speed: {item.id}</Heading>
-        <Heading>Abilities: {item.id}</Heading>
-        <Heading>Moves: {item.id}</Heading>
+        {/* <Heading>Type: {item.types[0].type.name}</Heading> */}
+        <Heading>Type: {}</Heading>
+        <Heading>Hp: {}</Heading>
+        <Heading>Attack: {}</Heading>
+        <Heading>Defense: {}</Heading>
+        <Heading>Special-Attack: {}</Heading>
+        <Heading>Special-Defense: {}</Heading>
+        <Heading>Speed: {}</Heading>
+        <Heading>Abilities: {}</Heading>
+        <Heading>Moves: {}</Heading>
         <Heading>Weight: {item.weight}</Heading>
-        <Heading>Height: {item.id}</Heading>
+        <Heading>Height: {}</Heading>
 
         <Button w={'100%'} onClick={handleRemoveFavorite}>
           Remove To Favorite

@@ -42,19 +42,19 @@ export const SingleType = () => {
         >
           <Heading>Name: {singleData.name}</Heading>
           <Image src="" />
-          <Heading>ID: {singleData.id}</Heading>
-          <Heading>Base Experience: {singleData.base_experience}</Heading>
-          <Heading>Type: {singleData.id}</Heading>
-          <Heading>Hp: {singleData.id}</Heading>
-          <Heading>Attack: {singleData.id}</Heading>
-          <Heading>Defense: {singleData.id}</Heading>
-          <Heading>Special-Attack: {singleData.id}</Heading>
-          <Heading>Special-Defense: {singleData.id}</Heading>
-          <Heading>Speed: {singleData.id}</Heading>
-          <Heading>Abilities: {singleData.id}</Heading>
-          <Heading>Moves: {singleData.id}</Heading>
-          <Heading>Weight: {singleData.weight}</Heading>
-          <Heading>Height: {singleData.id}</Heading>
+          <Heading>ID: {}</Heading>
+          <Heading>Base Experience: {}</Heading>
+          <Heading>Type: {}</Heading>
+          <Heading>Hp: {}</Heading>
+          <Heading>Attack: {}</Heading>
+          <Heading>Defense: {}</Heading>
+          <Heading>Special-Attack: {}</Heading>
+          <Heading>Special-Defense: {}</Heading>
+          <Heading>Speed: {}</Heading>
+          <Heading>Abilities: {}</Heading>
+          <Heading>Moves: {}</Heading>
+          <Heading>Weight: {}</Heading>
+          <Heading>Height: {}</Heading>
         </Box>
       </Flex>
     </Box>

@@ -8,6 +8,8 @@ export const SinglePokemon = () => {
   const [singleData, setSingleData] = useState({});
   const [pokemonFavorites, setPokemonFavorites] = useState([]);
 
+  console.log(singleData);
+
   const fetchData = async (url) => {
     try {
       let res = await fetch(`${url}/${params.pokemon_name}`, {
@@ -51,22 +53,27 @@ export const SinglePokemon = () => {
 
       {/* 2 */}
       <Flex p={'100px 5rem 50px 5rem'} justify={'center'} align={'center'}>
-        <Box p={'2rem'} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} borderRadius={"5px"}>
+        <Box
+          p={'2rem'}
+          boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}
+          borderRadius={'5px'}
+        >
           <Heading>Name: {singleData.name}</Heading>
           <Image src="" />
           <Heading>ID: {singleData.id}</Heading>
           <Heading>Base Experience: {singleData.base_experience}</Heading>
-          <Heading>Type: {singleData.id}</Heading>
-          <Heading>Hp: {singleData.id}</Heading>
-          <Heading>Attack: {singleData.id}</Heading>
-          <Heading>Defense: {singleData.id}</Heading>
-          <Heading>Special-Attack: {singleData.id}</Heading>
-          <Heading>Special-Defense: {singleData.id}</Heading>
-          <Heading>Speed: {singleData.id}</Heading>
-          <Heading>Abilities: {singleData.id}</Heading>
-          <Heading>Moves: {singleData.id}</Heading>
+          {/* <Heading>Type: {singleData.types[0].type.name}</Heading> */}
+          <Heading>Type: {}</Heading>
+          <Heading>Hp: {}</Heading>
+          <Heading>Attack: {}</Heading>
+          <Heading>Defense: {}</Heading>
+          <Heading>Special-Attack: {}</Heading>
+          <Heading>Special-Defense: {}</Heading>
+          <Heading>Speed: {}</Heading>
+          <Heading>Abilities: {}</Heading>
+          <Heading>Moves: {}</Heading>
           <Heading>Weight: {singleData.weight}</Heading>
-          <Heading>Height: {singleData.id}</Heading>
+          <Heading>Height: {}</Heading>
 
           <Button w={'100%'} onClick={handleFavorite}>
             Add To Favorite
@@ -76,61 +83,3 @@ export const SinglePokemon = () => {
     </Box>
   );
 };
-
-// abilities
-// :
-// (2) [{…}, {…}]
-// base_experience
-// :
-// 64
-// forms
-// :
-// [{…}]
-// game_indices
-// :
-// (20) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// height
-// :
-// 7
-// held_items
-// :
-// []
-// id
-// :
-// 1
-// is_default
-// :
-// true
-// location_area_encounters
-// :
-// "https://pokeapi.co/api/v2/pokemon/1/encounters"
-// moves
-// :
-// (83) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
-// name
-// :
-// "bulbasaur"
-// order
-// :
-// 1
-// past_abilities
-// :
-// []
-// past_types
-// :
-// []
-// species
-// :
-// {name: 'bulbasaur', url: 'https://pokeapi.co/api/v2/pokemon-species/1/'}
-// sprites
-// :
-// {back_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png', back_female: null, back_shiny: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/shiny/1.png', back_shiny_female: null, front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png', …}
-// stats
-// :
-// (6) [{…}, {…}, {…}, {…}, {…}, {…}]
-// types
-// :
-// (2) [{…}, {…}]
-// weight
-// :
-// 69
