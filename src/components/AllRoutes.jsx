@@ -13,8 +13,8 @@ export const AllRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/types" element={<Types />} />
       <Route path="/favorites" element={<Favorites />} />
-      <Route path="/single-pokemon/:name" element={<SinglePokemon />} />
-      <Route path="/single-type/:name" element={<SingleType />} />
+      <Route path="/pokemon/:pokemon_name" element={<SinglePokemon />} />
+      <Route path="/type/:types_id" element={<SingleType />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

@@ -10,7 +10,7 @@ export const SinglePokemon = () => {
 
   const fetchData = async (url) => {
     try {
-      let res = await fetch(`${url}/${params.name}`, {
+      let res = await fetch(`${url}/${params.pokemon_name}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
@@ -51,7 +51,7 @@ export const SinglePokemon = () => {
 
       {/* 2 */}
       <Flex p={'100px 5rem 50px 5rem'} justify={'center'} align={'center'}>
-        <Box p={'1rem'} box-shadow="rgba(0, 0, 0, 0.24) 0px 3px 8px">
+        <Box p={'2rem'} boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} borderRadius={"5px"}>
           <Heading>Name: {singleData.name}</Heading>
           <Image src="" />
           <Heading>ID: {singleData.id}</Heading>

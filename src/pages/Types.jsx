@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Flex } from '@chakra-ui/react';
+import { Box } from '@chakra-ui/react';
 import { Navbar } from '../components/Navbar';
 import { PokemonTypeList } from '../components/PokemonTypeList';
 
 export const Types = () => {
   const [data, setData] = useState([]);
-  const [pageNo, setpageNo] = useState(1);
 
-  const fetchData = async (url, pageNo) => {
+  const fetchData = async (url) => {
     try {
-      let res = await fetch(`${url}?limit=20&offset=${pageNo}`, {
+      let res = await fetch(`${url}`, {
         method: 'GET',
         headers: {
           'content-type': 'application/json',
@@ -25,8 +24,8 @@ export const Types = () => {
   };
 
   useEffect(() => {
-    fetchData(`https://pokeapi.co/api/v2/type`, pageNo);
-  }, [pageNo]);
+    fetchData(`https://pokeapi.co/api/v2/type`);
+  }, []);
 
   return (
     <Box>
@@ -37,18 +36,6 @@ export const Types = () => {
       <Box p={'100px 5rem 50px 5rem'}>
         <PokemonTypeList data={data} />
       </Box>
-
-      {/* 3 */}
-      <Flex p={'1rem 5rem'} justify={'center'}>
-        <Button
-          onClick={() => setpageNo((prev) => prev - 1)}
-          isDisabled={pageNo === 1}
-        >
-          Previous
-        </Button>
-        <Button isDisabled>{pageNo}</Button>
-        <Button onClick={() => setpageNo((prev) => prev + 1)}>Next</Button>
-      </Flex>
     </Box>
   );
 };

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const PokemonTypeCard = ({ name, url }) => {
   return (
-    <Link to={`/single-type/${name}`}>
+    <Link to={`/type/${name}`}>
       <Box
         border={'1px solid gray'}
         p={'1rem'}

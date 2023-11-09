@@ -19,7 +19,7 @@ export const Favorites = () => {
       <Navbar />
 
       {/* 2 */}
-      <Box border={'1px solid red'} p={'100px 5rem 50px 5rem'}>
+      <Box p={'100px 5rem 50px 5rem'}>
         <FavoritesList data={pokemonFavorites} />
       </Box>
     </Box>
